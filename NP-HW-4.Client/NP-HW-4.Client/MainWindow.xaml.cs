@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -7,7 +9,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
+//using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -18,9 +20,6 @@ using System.Windows.Shapes;
 
 namespace NP_HW_4.Client
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -45,23 +44,24 @@ namespace NP_HW_4.Client
             while (countFileBlock > 0)
             {
                 size = server.ReceiveFrom(buffer, ref serverEP);
-
-                
                 stream.Write(buffer, 0, size);
                 sizeFile += size;
                 countFileBlock--;
 
             }
-            MessageBox.Show("prishel");
+
             stream.Close();
 
-            //BitmapImage screen = new BitmapImage();
-            //screen.BeginInit();
-            //screen.UriSource = new Uri("image.jpeg");
-            //screen.EndInit();
+            BitmapImage bm1 = new BitmapImage();
+            bm1.BeginInit();
+            bm1.UriSource = new Uri("image.jpeg", UriKind.Relative);
+            bm1.CacheOption = BitmapCacheOption.OnLoad;
+            bm1.EndInit();
 
-            //image.Source = screen;
 
+            image.Source = bm1;
+            
         }
+       
     }
 }
