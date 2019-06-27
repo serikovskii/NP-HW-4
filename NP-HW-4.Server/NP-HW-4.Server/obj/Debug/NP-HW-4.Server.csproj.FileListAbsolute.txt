@@ -5,3 +5,10 @@ C:\Users\azat\source\repos\NP-HW-4.Server\NP-HW-4.Server\obj\Debug\NP-HW-4.Serve
 C:\Users\azat\source\repos\NP-HW-4.Server\NP-HW-4.Server\obj\Debug\NP-HW-4.Server.csproj.CoreCompileInputs.cache
 C:\Users\azat\source\repos\NP-HW-4.Server\NP-HW-4.Server\obj\Debug\NP-HW-4.Server.exe
 C:\Users\azat\source\repos\NP-HW-4.Server\NP-HW-4.Server\obj\Debug\NP-HW-4.Server.pdb
+C:\Users\мукушева\Documents\GitHub\NP-HW-4\NP-HW-4.Server\NP-HW-4.Server\bin\Debug\NP-HW-4.Server.exe.config
+C:\Users\мукушева\Documents\GitHub\NP-HW-4\NP-HW-4.Server\NP-HW-4.Server\bin\Debug\NP-HW-4.Server.exe
+C:\Users\мукушева\Documents\GitHub\NP-HW-4\NP-HW-4.Server\NP-HW-4.Server\bin\Debug\NP-HW-4.Server.pdb
+C:\Users\мукушева\Documents\GitHub\NP-HW-4\NP-HW-4.Server\NP-HW-4.Server\obj\Debug\NP-HW-4.Server.csprojAssemblyReference.cache
+C:\Users\мукушева\Documents\GitHub\NP-HW-4\NP-HW-4.Server\NP-HW-4.Server\obj\Debug\NP-HW-4.Server.csproj.CoreCompileInputs.cache
+C:\Users\мукушева\Documents\GitHub\NP-HW-4\NP-HW-4.Server\NP-HW-4.Server\obj\Debug\NP-HW-4.Server.exe
+C:\Users\мукушева\Documents\GitHub\NP-HW-4\NP-HW-4.Server\NP-HW-4.Server\obj\Debug\NP-HW-4.Server.pdb

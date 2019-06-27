@@ -32,21 +32,36 @@ namespace NP_HW_4.Client
         {
             Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             EndPoint serverEP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 12345);
+            BitmapImage imageReceive = new BitmapImage();
 
             server.SendTo(Encoding.ASCII.GetBytes("getScreen"), serverEP);
-            byte[] buffer = new byte[8192 * 1024];
-            while (true)
+            byte[] buffer = new byte[70 * 1024];
+            FileStream stream = new FileStream("image.jpeg", FileMode.Create);
+            var byetFileBlock = new byte[1550];
+            long sizeFile = 0;
+            int countFileBlock = 0;
+            int size = server.ReceiveFrom(byetFileBlock, ref serverEP);
+            countFileBlock = BitConverter.ToInt32(byetFileBlock, 0);
+            while (countFileBlock > 0)
             {
-                server.ReceiveFrom(buffer, ref serverEP);
-                if (buffer.Length > 0)
-                {
-                    MemoryStream stream = new MemoryStream(buffer);
-                    BitmapImage imageReceive = new BitmapImage();
-                    imageReceive.StreamSource = stream;
-                    image.Source = imageReceive;
-                    break;
-                }
+                size = server.ReceiveFrom(buffer, ref serverEP);
+
+                
+                stream.Write(buffer, 0, size);
+                sizeFile += size;
+                countFileBlock--;
+
             }
+            MessageBox.Show("prishel");
+            stream.Close();
+
+            //BitmapImage screen = new BitmapImage();
+            //screen.BeginInit();
+            //screen.UriSource = new Uri("image.jpeg");
+            //screen.EndInit();
+
+            //image.Source = screen;
+
         }
     }
 }
